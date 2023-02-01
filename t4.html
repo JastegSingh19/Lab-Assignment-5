@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="change()" id="BTN">Hit Me</button>
+    <table id="timetable"></table>
+    <script>
+        let k=0,a=1;
+        change=function() {
+            c=k+a;
+            k=a;
+            a=c;
+            t=document.querySelector('table');
+            trow=document.createElement("tr");
+            td=document.createElement("td");
+            const node=document.createTextNode(c);
+            td.appendChild(node);
+            trow.appendChild(td);
+            t.appendChild(trow);
+        }
+    
+    </script>
+    
+</body>
+</html>

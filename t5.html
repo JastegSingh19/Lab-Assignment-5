@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function performOperation(operator) {
+        var input1 = parseInt(document.getElementById("input1").value);
+        var input2 = parseInt(document.getElementById("input2").value);
+        var result;
+
+        switch (operator) {
+          case "+":
+            result = input1 + input2;
+            break;
+          case "-":
+            result = input1 - input2;
+            break;
+          case "*":
+            result = input1 * input2;
+            break;
+          case "/":
+            result = input1 / input2;
+            break;
+          default:
+            result = "Invalid operator";
+        }
+
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <br><br>
+    <button onclick="performOperation('+')">+</button>
+    <button onclick="performOperation('-')">-</button>
+    <button onclick="performOperation('*')">*</button>
+    <button onclick="performOperation('/')">/</button>
+    <br><br>
+    <div id="result"></div>
+  </body>
+</html>
